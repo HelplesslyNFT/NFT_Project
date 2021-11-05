@@ -1,0 +1,11 @@
+.bg-tertiary {
+  background-color: #fdfd70;
+}
+
+.sticky .sticky-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
