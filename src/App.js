@@ -45,9 +45,17 @@ const App = () => {
   };
 
   const setConnectedWallet = (account) => {
-    setWalletAddress(account.substring(0,5) + "..." + account.slice(-4));
-    setWalletConnected(account);
-    setWalletLoading(false);
+    if(account.length !== 0){
+      setWalletAddress(account.slice(0,5) + "..." + account.slice(-4));
+      setWalletConnected(account);
+      setWalletLoading(false);
+    }
+    else{
+      setWalletAddress("");
+      setWalletConnected(null);
+      setNoWalletFound(false);
+      setWalletLoading(false);
+    }
   }
 
   const chainChangedHandler = () =>{
